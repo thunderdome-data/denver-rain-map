@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Denver rains</title>
+	   <link rel="stylesheet" href="lib/css/jquery-ui.css" />
+       <link type="text/css" href="lib/css/rainmap.css" rel="stylesheet" >
+
+</head>
+
+<body>
+	
+	<div id="container">
+        <div id="date-shown">
+            <div id="type-of-data">
+                <form>
+                <strong>Rainfall:</strong>
+                <label for="data_type"><input type="radio" name="data_type" id="max_rainfall" onclick="switch_data_type(1)" />Daily maximum
+                <label for="data_type"><input type="radio" name="data_type" id="ave_rainfall" onclick="switch_data_type(0)" />Daily average 
+                <label for="data_type"><input type="radio" checked name="data_type" id="max_rainfall" onclick="switch_data_type(2)" />Cumulative maximum
+                </form>
+            </div> 
+
+            
+        </div>
+        <div id="sliderCon">
+            <div id="animate" onclick="slider_switch()"><a class="animate" href="javascript:void(0);">Animate</a></div>
+            <div id="theSlider">
+                <div id="slider"></div>
+                <div id="firstlabel" class="sliderLabel">SEPT. 8</div>
+                <div id="lastlabel" class="sliderLabel">SEPT. 17</div>
+            </div>
+            <div style="clear:both"></div>
+        </div> 
+
+        <div id="the-date">&nbsp;</div>
+		<div id="dfm_rain_map_div"></div>
+    <div class="credits-con">
+    Sources: <a class="credits-con" href="http://www.cocorahs.org/" target="_top">CoCoRaHS</a> <br /> Credits: Vaughn Hagerty, Nelson Hsu / DFM
+    </div>
+
+	</div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>    
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=true" type="text/javascript"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.5/src/markerwithlabel_packed.js"></script>
+    <script type ="text/javascript" src="lib/js/map-style.js"></script>
+    <script type="text/javascript" src="lib/js/dates.js"></script>
+    <script type="text/javascript" src="lib/js/data.js"></script>
+    <script type="text/javascript" src="lib/js/polys.js"></script>
+    <script src="http://data.digitalfirstmedia.com/lib/js/handlebars-1.0.rc.1.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+    <script type="text/javascript" src="lib/js/denver-rain-map.js">
+    </script>
+
+     <!--handlebars template to build main map legend-->
+
+    <script id="map-legend-template" type="text/x-handlebars-template">
+        <p><b>How much rain?</b></p>
+        <p class="cumulative-color"><div class="little-square cumulative-color" style="background-color:#A23622"></div><span class="cumulative-color">More than 20 inches</span></p>
+        <p class="cumulative-color"><div class="little-square cumulative-color" style="background-color:#D8472A"></div><span class="cumulative-color">10-20 inches</span></p>
+        <p><div class="little-square" style="background-color:#ECA395"></div><span>5-10 inches</span></p>
+        <p><div class="little-square" style="background-color:#EEC534"></div><span>2-5 inches</span></p>
+        <p><div class="little-square" style="background-color:#F6E39A"></div><span>1-2 inches</span></p>
+        <p><div class="little-square" style="background-color:#92BD7E"></div><span>Less than 1 inch</span></p>
+        <p><div class="little-square" style="background-color:#4d4d4b"></div><span>Data unavailable</span></p>
+    </script>
+
+     <!--handlebars template for map rollovers-->
+
+    <script id="map-rollover-template" type="text/x-handlebars-template">
+        <strong>{{label}} County</strong><br />
+        Max: {{max}}<br />
+        Avg: {{ave}}<br />
+        Cumulative: {{cumulative}}
+    </script>
+
+
+<!--analytics-->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37303540-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

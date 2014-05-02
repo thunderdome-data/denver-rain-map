@@ -1,0 +1,67 @@
+#container { width: 900px; }
+a { text-decoration: none; color: #000;}
+a.credits-con { text-decoration: none; color: #999;}
+
+a:hover { text-decoration: underline; }
+
+input[type="radio"] {
+    margin-left: 20px; 
+}
+
+#sliderCon { margin: 20px 0 10px 0; }
+
+#dfm_rain_map_div {  height: 550px; width:100%; margin-bottom: 10px; background-color: #999; }
+
+#slider { margin: 0px 0 0px 0px; }
+#theSlider { margin-left: 140px;}
+.sliderLabel { font: 10px Arial; color: #999; margin-top: 5px;}
+#firstlabel { float: left; }
+#lastlabel { float: right; }
+
+#test { padding: 5px; width: 100px;}
+
+#date-shown { height: 25px; font: 14px Arial; padding: 0 0 5px 0; border-bottom: 1px dotted #CCC; }
+#the-date {width: 200px !important; display:inline; float: left; padding-top: 3px; font: bold 14px Arial; margin-bottom: 10px}
+#data_type {margin-left: 10px; display:inline; float: left; padding-top: 3px;}
+#big_chart_container {width: 100%; height; 150px; margin: 0 10px 10px 0; background-color: #CCC; }
+#animate {
+    display: inline;
+    float: left;
+	width: 100px; 
+	height: 17px;  
+	background-color: #000; 
+	text-align: center; 
+	font: bold 13px Arial; 
+	border-radius: 4px; 
+	padding: 5px;
+    margin-top: -5px;
+    cursor: pointer;
+}
+#animate:hover { background-color: #666; }
+
+#animate a { color: #FFF;}
+#animate a:hover { text-decoration: none; }
+.chartCon { width: 300px; height: 150px; float: left; margin: 0 10px 10px 0; background-color: #CCC; }
+.chartCon:nth-child(even) { margin: 0 0 10px 10px }
+.chart-highlight { border: 1pt solid #000; margin: 0; padding: 0; }
+.credits-con { font: italic 11px Arial; color: #999; clear:both;} 
+
+
+/*map legend*/
+.little-square { 
+    width: 15px !important;
+    height: 15px !important;
+    padding: 0;
+    margin: 0 10px 2px 0;
+    border: 1px solid black;
+    display: inline;
+    float: left;
+    
+}
+.legend { width: 120px; background-color: #fff; opacity: 0.80; border: 1px solid #666; padding: 2px 5px; margin-right: 5px; font: 10pt Arial;}
+.legend p { margin-top: 3px;}
+p.legend-explain { font: 8pt Arial; line-height: 1; };
+
+
+
+
