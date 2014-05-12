@@ -30,4 +30,4 @@ The project contains the following folders and important files:
 License
 ----------
 
-Describe the license here. TK. For now, consider it double-0 ...
+This code is available under the MIT license. For more information, please see the LICENSE file in this repo.
