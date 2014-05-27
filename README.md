@@ -6,6 +6,10 @@ What is this?
 
 "Animated" choropleth map to show intensity of rain by county during 2013 Colorado deluge
 
+Live demo: http://www.denverpost.com/2013coloradofloods/ci_24132410/2013-colorado-flood-rainfall-totals-timeline-map
+
+![rain map](screenshots/rains.png)
+
 Credits
 ---------
 
